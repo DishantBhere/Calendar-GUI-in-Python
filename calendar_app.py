@@ -1,7 +1,21 @@
-from tkinter import *
+"""
+Calendar Viewer App
+A simple GUI application to display calendars for a given year.
+
+Author: Dishant
+Date: June 2025
+"""
+
+from tkinter import Tk, Label, Entry, Button, Frame, Scrollbar, Text, BOTH, HORIZONTAL, VERTICAL, END
 import calendar
 
 def show_calendar():
+    """
+    Display the calendar for the entered year in the text area.
+
+    Retrieves the year from the input field and displays the corresponding calendar.
+    If the input is invalid, an error message is shown.
+    """
     try:
         year = int(year_entry.get())
         cal_output.delete('1.0', END)
@@ -51,9 +65,3 @@ frame.grid_rowconfigure(0, weight=1)
 frame.grid_columnconfigure(0, weight=1)
 
 root.mainloop()
-"""
-📅 Calendar Viewer App
-Created by Dishant
-Python 3.13 | June 2025
-"""
-
